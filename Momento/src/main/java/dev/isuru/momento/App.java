@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
@@ -19,21 +18,21 @@ public class App extends Application {
         // File Menu
         Menu fileMenu = new Menu("File");
         MenuItem save = new MenuItem("Save");
-        save.setAccelerator(KeyCombination.keyCombination("Ctrl+S")); // Shortcut for Save
-        save.setOnAction(e -> statusLabel.setText("Saved")); // Replace with your save logic
+        save.setAccelerator(KeyCombination.keyCombination("Ctrl+S"));
+        save.setOnAction(e -> statusLabel.setText("Saved"));
         MenuItem exit = new MenuItem("Exit");
-        exit.setAccelerator(KeyCombination.keyCombination("Ctrl+Q")); // Shortcut for Exit
+        exit.setAccelerator(KeyCombination.keyCombination("Ctrl+Q"));
         exit.setOnAction(e -> System.exit(0));
         fileMenu.getItems().addAll(save, new SeparatorMenuItem(), exit);
 
         // Edit Menu
         Menu editMenu = new Menu("Edit");
         MenuItem undo = new MenuItem("Undo");
-        undo.setAccelerator(KeyCombination.keyCombination("Ctrl+Z")); // Shortcut for Undo
-        undo.setOnAction(e -> statusLabel.setText("Undo")); // Replace with your undo logic
+        undo.setAccelerator(KeyCombination.keyCombination("Ctrl+Z"));
+        undo.setOnAction(e -> statusLabel.setText("Undo"));
         MenuItem redo = new MenuItem("Redo");
-        redo.setAccelerator(KeyCombination.keyCombination("Ctrl+Y")); // Shortcut for Redo
-        redo.setOnAction(e -> statusLabel.setText("Redo")); // Replace with your redo logic
+        redo.setAccelerator(KeyCombination.keyCombination("Ctrl+Y"));
+        redo.setOnAction(e -> statusLabel.setText("Redo"));
         editMenu.getItems().addAll(undo, redo);
 
         menuBar.getMenus().addAll(fileMenu, editMenu);
